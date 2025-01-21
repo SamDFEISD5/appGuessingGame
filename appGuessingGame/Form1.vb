@@ -47,14 +47,14 @@ Public Class Form1
             Case <= 0, > 100
                 MessageBox.Show("Please enter a value from 1 to 100")
             Case < intRandomValue
-                MessageBox.Show("Too low.")
+                MessageBox.Show("Too high.")
                 txtGuess.Text = ""
             Case > intRandomValue
-                MessageBox.Show("Too high.")
+                MessageBox.Show("Too low.")
                 txtGuess.Text = ""
             Case = intRandomValue
                 btnClap.Visible = True
-                MessageBox.Show("Congratulations! You guessed the number.")
+                MessageBox.Show("You guessed the number.")
                 btnStart.Visible = True
                 btnGuess.Visible = False
                 txtGuess.Visible = False
@@ -66,6 +66,10 @@ Public Class Form1
 
 
         lblGuessCounter.Text = intGuessCounter
+
+    End Sub
+
+    Private Sub btnClap_Click(sender As Object, e As EventArgs) Handles btnClap.Click
 
     End Sub
 End Class
